@@ -1,0 +1,49 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 90%);
+  gap: 1px;
+  padding: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 1em;
+}
+
+.noderow {
+  display: flex;
+  gap: 2px;
+}
+
+.node {
+  min-width: 1.5vw;
+  min-height: 1.5vw;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 2px;
+  background-color: hsl(0, 0%, 96%);
+  transition: background-color 600ms ease-in-out;
+}
+
+.node.start {
+  background-color: hsl(120, 70%, 50%) !important;
+}
+
+.node.end {
+  background-color: hsl(0, 60%, 60%) !important;
+}
+
+.node.obstacle {
+  background-color: hsl(0, 0%, 40%) !important;
+}
+
+.node:not(.start, .end).searched.path {
+  background-color: hsl(120, 80%, 75%) !important;
+}
+
+.node.known {
+  background-color: hsl(240, 100%, 80%);
+}
+
+.node.known.searched {
+  background-color: hsl(240, 100%, 65%);
+}

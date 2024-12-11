@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-inline: 1em;
+}
+
+main {
+    width: 100vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+canvas {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 2/1;
+    min-width: 300px;
+}
+
+
+table {
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+th, td {
+    text-align: center;
+    padding: 2px;
+}
+
+th {
+    background-color: #5587b9;
+    color: white;
+}
+
+td {
+    background-color: rgba(0,0,0,0.01);
+}
+
+.bold-value {
+    font-weight: bold;
+}

@@ -1,0 +1,76 @@
+/* Grid.css */
+.grid-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px  2px rgba(0,0,0,0.3);
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-cell {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  position: relative;
+  border: 1px solid hsl(0, 0%, 45%);
+  background-color: hsl(0, 0%, 90%);
+}
+
+.grid-cell::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  color: rgba(0,0,0,0.45);
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+}
+
+.grid-cell.path.left::before {
+  content: "\2190"
+}
+.grid-cell.path.right::before {
+  content: "\2192"
+}
+.grid-cell.path.up::before {
+  content: "\2191"
+}
+.grid-cell.path.down::before {
+  content: "\2193"
+}
+
+.grid-cell.passage-top {
+  border-top: 1px solid transparent !important;
+}
+
+.grid-cell.passage-bot {
+  border-bottom: 1px solid transparent !important;
+}
+
+.grid-cell.passage-left {
+  border-left: 1px solid transparent !important;
+}
+
+.grid-cell.passage-right {
+  border-right: 1px solid transparent !important;
+}
+
+.grid-cell.path::before {
+  background-color: hsl(120, 50%, 75%);
+}
+
+.grid-cell.start::before {
+  background-color: hsl(120, 50%, 35%);
+}
+
+.grid-cell.end::before {
+  background-color: hsl(0, 50%, 50%);
+}

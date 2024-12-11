@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1 class="mt-4 mb-4">Minimum Spanning Tree Visualizer</h1>
+
+        <p>
+            Graph visualization with Kruskal's and Prim's algorithms. Kruskal's algorithm and Prim's algorithm are two
+            popular algorithms for finding the minimum spanning tree of a graph.
+
+            Learn more about <a href="https://en.wikipedia.org/wiki/Kruskal%27s_algorithm">Kruskal's
+                algorithm</a> and <a href="https://en.wikipedia.org/wiki/Prim%27s_algorithm">Prim's
+                algorithm</a> on Wikipedia.
+        </p>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="algorithm" id="kruskalRadio">
+            <label class="form-check-label" for="kruskalRadio">Kruskal's Algorithm</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="algorithm" id="primRadio" checked>
+            <label class="form-check-label" for="primRadio">Prim's Algorithm</label>
+        </div>
+
+        <button class="btn btn-primary mt-3 mb-3" id="new-graph">Generate New Graph</button>
+
+        <div id="graphContainer" style="display: flex; justify-content: center;">
+            <canvas id="graphCanvas"></canvas>
+        </div>
+        <hr>
+        <h4>Adjacency matrix</h4>
+        <div id="adjacencyMatrix"></div>
+    </main>
+</body>
+
+</html>
